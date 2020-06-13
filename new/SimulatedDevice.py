@@ -15,15 +15,16 @@ from azure.iot.device import IoTHubDeviceClient, Message, MethodResponse
 # The device connection string to authenticate the device with your IoT hub.
 # Using the Azure CLI:
 # az iot hub device-identity show-connection-string --hub-name {YourIoTHubName} --device-id MyNodeDevice --output table
-CONNECTION_STRING = "HostName=Potted-1.azure-devices.net;DeviceId=P01;SharedAccessKey=BT59GCRQERFQCahYpekFCJ79eKVb4H5VNEWor2N3Y+Y="
+CONNECTION_STRING = "HostName=PottedIoTHub.azure-devices.net;DeviceId=10000;SharedAccessKey=SC2Ism6G4QqHpk2xDm4tgc2j9VHA67vA0ENDjcCARUg="
 
 # Define the JSON message to send to IoT Hub.
 TEMPERATURE = 20.0
 HUMIDITY = 60
-##Soil Moisture=
+MOISTURE = -33
 PH=14.0
 ##Sunlight=
-MSG_TXT = '{{"temperature": {temperature},"humidity": {humidity},"pH Level":{ph}}}'
+SUNLIGHT = 5000
+MSG_TXT = '{{"temperature": {temperature},"humidity": {humidity},"pH Level":{ph},"sunlight":{sunlight},"soil_moisture":{moisture}}}'
 
 INTERVAL = 1
 
@@ -76,8 +77,10 @@ def iothub_client_telemetry_sample_run():
             # Build the message with simulated telemetry values.
             temperature = TEMPERATURE + (random.random() * 15)
             humidity = HUMIDITY + (random.random() * 20)
-            ph=PH * random.random()
-            msg_txt_formatted = MSG_TXT.format(temperature=temperature, humidity=humidity,ph=ph)
+            ph= PH * random.random()
+            sunlight = random.randint(1,50000)
+            moisture = random.randint(-1500,0)
+            msg_txt_formatted = MSG_TXT.format(temperature=temperature, humidity=humidity,ph=ph, sunlight=sunlight, moisture=moisture)
             message = Message(msg_txt_formatted)
 
             # Add a custom application property to the message.
