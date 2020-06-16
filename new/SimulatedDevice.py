@@ -21,7 +21,7 @@ CONNECTION_STRING = "HostName=PottedIoTHub.azure-devices.net;DeviceId=10000;Shar
 #TEMPERATURE = 20.0
 #HUMIDITY = 60
 #MOISTURE = -33
-PH=14.0
+#PH=14.0
 #SUNLIGHT = 5000
 MSG_TXT = '{{"temperature": {temperature},"humidity": {humidity},"pH Level":{ph},"sunlight":{sunlight},"soil_moisture":{moisture}}}'
 
@@ -76,7 +76,7 @@ def iothub_client_telemetry_sample_run():
             # Build the message with simulated telemetry values.
             temperature = random.randint(23,36) + random.random()
             humidity = random.randint(40,85) + random.random()
-            ph= PH * random.random()
+            ph= random.randint(4,7) * random.random()
             sunlight = random.randint(15000,50000) + random.random()
             moisture = random.randint(35,100) + random.random()
             msg_txt_formatted = MSG_TXT.format(temperature=temperature, humidity=humidity,ph=ph, sunlight=sunlight, moisture=moisture)
