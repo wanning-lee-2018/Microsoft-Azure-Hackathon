@@ -76,10 +76,10 @@ def iothub_client_telemetry_sample_run():
             # Build the message with simulated telemetry values.
             temperature = random.randint(23,36) + random.random()
             humidity = random.randint(40,85) + random.random()
-            ph= random.randint(4,7) * random.random()
+            ph= random.randint(4,7) + random.random()
             sunlight = random.randint(15000,50000) + random.random()
             moisture = random.randint(35,100) + random.random()
-            msg_txt_formatted = MSG_TXT.format(temperature=temperature, humidity=humidity,ph=ph, sunlight=sunlight, moisture=moisture)
+            msg_txt_formatted = MSG_TXT.format(temperature=temperature, humidity=humidity,ph=ph,sunlight=sunlight, moisture=moisture)
             message = Message(msg_txt_formatted)
 
             # Add a custom application property to the message.
