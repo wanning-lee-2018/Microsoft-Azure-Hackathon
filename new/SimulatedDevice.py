@@ -18,12 +18,11 @@ from azure.iot.device import IoTHubDeviceClient, Message, MethodResponse
 CONNECTION_STRING = "HostName=PottedIoTHub.azure-devices.net;DeviceId=10000;SharedAccessKey=SC2Ism6G4QqHpk2xDm4tgc2j9VHA67vA0ENDjcCARUg="
 
 # Define the JSON message to send to IoT Hub.
-TEMPERATURE = 20.0
-HUMIDITY = 60
-MOISTURE = -33
+#TEMPERATURE = 20.0
+#HUMIDITY = 60
+#MOISTURE = -33
 PH=14.0
-##Sunlight=
-SUNLIGHT = 5000
+#SUNLIGHT = 5000
 MSG_TXT = '{{"temperature": {temperature},"humidity": {humidity},"pH Level":{ph},"sunlight":{sunlight},"soil_moisture":{moisture}}}'
 
 INTERVAL = 1
@@ -75,11 +74,11 @@ def iothub_client_telemetry_sample_run():
 
         while True:
             # Build the message with simulated telemetry values.
-            temperature = TEMPERATURE + (random.random() * 15)
-            humidity = HUMIDITY + (random.random() * 20)
+            temperature = random.randint(23,36) + random.random()
+            humidity = random.randint(40,85) + random.random()
             ph= PH * random.random()
-            sunlight = random.randint(1,50000)
-            moisture = random.randint(-1500,0)
+            sunlight = random.randint(15000,50000) + random.random()
+            moisture = random.randint(35,100) + random.random()
             msg_txt_formatted = MSG_TXT.format(temperature=temperature, humidity=humidity,ph=ph, sunlight=sunlight, moisture=moisture)
             message = Message(msg_txt_formatted)
 
