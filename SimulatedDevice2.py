@@ -96,8 +96,8 @@ def iothub_client_telemetry_sample_run():
             temperature = random.randint(23,36) + random.random()
             humidity = random.randint(40,85) + random.random()
             ph= random.randint(4,7) + random.random()
-            sunlight = random.randint(15000,50000) + random.random()
-            moisture = random.randint(35,100) + random.random()
+            sunlight = random.randint(15000,49999) + random.random()
+            moisture = random.randint(35,99) + random.random()
             image_url=image_urls[random.randint(0,1)]
             HasWeed=PostCVPrediction(image_url)
             msg_txt_formatted = MSG_TXT.format(temperature=temperature, humidity=humidity,ph=ph,sunlight=sunlight, moisture=moisture,HasWeed=HasWeed)
