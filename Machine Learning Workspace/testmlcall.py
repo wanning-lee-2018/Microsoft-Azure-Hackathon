@@ -17,7 +17,8 @@ key = 'PYEtDWhPY5qYhHsBAKY04ls5kUasdLeU'
 #another method
 data = {"data":[
             
-                {'pH':4.113643355,'Temperature':26.45361526,'Soil Moisture(%)':46.99867094,'Humidity(%)':47.81398495,'Sunlight(lux)':45977.40904,'HasWeed':1.0}
+                {'pH':4.113643355,'Temperature':26.45361526,
+                'Soil Moisture(%)':46.99867094,'Humidity(%)':47.81398495,'Sunlight(lux)':45977.40904,'HasWeed':1.0}
             ]
         }
 
