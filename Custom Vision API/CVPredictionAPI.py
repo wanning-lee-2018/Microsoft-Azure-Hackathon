@@ -38,27 +38,27 @@ import os
 
 # # #imagepath="D:\Microsoft Azure Hackathon\potted-iot\iot-hub\Quickstarts\simulated-device-2\undp_seedlings_dataset\testing_data\Maize\184.png"
 # # #data= open(imagepath,'rb').read()
-url = "https://potted-cv-1.cognitiveservices.azure.com/customvision/v3.0/Prediction/7308f98a-e5c4-4d9d-9f3e-7be4cc604a0b/classify/iterations/Potted-CV%20model/image"
+# url = "https://potted-cv-1.cognitiveservices.azure.com/customvision/v3.0/Prediction/7308f98a-e5c4-4d9d-9f3e-7be4cc604a0b/classify/iterations/Potted-CV%20model/image"
 
-#payload = {}
-files =[
-	({'' :open('undp_seedlings_dataset/testing_data/Maize/184.png','rb')}, 'multipart/form-data')
-]
+# #payload = {}
+# files =[
+# 	({'' :open('undp_seedlings_dataset/testing_data/Maize/184.png','rb')}, 'multipart/form-data')
+# ]
 
-headers = {
-	'Content-Type': 'application/octet-stream',
-	'Prediction-Key': 'd11988b68aff44689442d2995dd4912f'
-}
-response = requests.request("POST", url,headers=headers, files = files)
+# headers = {
+# 	'Content-Type': 'application/octet-stream',
+# 	'Prediction-Key': 'd11988b68aff44689442d2995dd4912f'
+# }
+# response = requests.request("POST", url,headers=headers, files = files)
 
-#print(response.text.encode('utf8'))   #====REMOVED THIS LINE CUZ IT WONT WORK===
+# #print(response.text.encode('utf8'))   #====REMOVED THIS LINE CUZ IT WONT WORK===
 
-results=response.json()
-print(results)
-#probs={}
-# for pred in results['predictions']:
-#     probs[pred["tagName"]]=pred["probability"]
-# print(max(probs,key=probs.get))
+# results=response.json()
+# print(results)
+# #probs={}
+# # for pred in results['predictions']:
+# #     probs[pred["tagName"]]=pred["probability"]
+# # print(max(probs,key=probs.get))
 
 
 
