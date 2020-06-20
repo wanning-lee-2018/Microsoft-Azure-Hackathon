@@ -1,5 +1,5 @@
 function createArray(pHLevel,temperature,soil_moisture,humidity,sunlight,hasWeed){
-    var data={"pH":pHLevel,'Temperature':temperature,'Soil Moisture(%)':soil_moisture,'Humidity(%)':humidity,'Sunlight(lux)':sunlight,'HasWeed':hasWeed}
+    var data={"pH Level":pHLevel,'Temperature(C)':temperature,'Soil Moisture(%)':soil_moisture,'Humidity(%)':humidity,'Sunlight(lux)':sunlight,'HasWeed':hasWeed}
     return data
 }
 
