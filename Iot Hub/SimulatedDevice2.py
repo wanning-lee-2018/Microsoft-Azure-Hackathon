@@ -38,6 +38,7 @@ def PostCVPrediction(image_url):
 		HasWeed=0
     return  HasWeed
 #Simulating the inputs to the Custom Vision Prediction API
+#Specify 2 image urls that belongs to a weed(Shepherd's Purse) and a plant seedling(Sugar beet) respectively 
 image_urls = {1:"{\n    \"Url\": \"https://vision.eng.au.dk/wp-content/uploads/2017/11/47-150x150.png\"\n}",0:"{\n    \"Url\": \"https://vision.eng.au.dk/wp-content/uploads/2017/11/391.png\"\n}"}
 
 
