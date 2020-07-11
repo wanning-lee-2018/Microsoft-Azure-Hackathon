@@ -18,15 +18,15 @@ from azure.iot.device import IoTHubDeviceClient, Message, MethodResponse
 # The device connection string to authenticate the device with your IoT hub.
 # Using the Azure CLI:
 # az iot hub device-identity show-connection-string --hub-name {YourIoTHubName} --device-id MyNodeDevice --output table
-CONNECTION_STRING = "HostName=Potted-1.azure-devices.net;DeviceId=P01;SharedAccessKey=BT59GCRQERFQCahYpekFCJ79eKVb4H5VNEWor2N3Y+Y="
+CONNECTION_STRING = ""  #INSERT CONNECTION STRING
 
 #Simulating the results from the Custom Vision Prediction API
 
 def PostCVPrediction(image_url):
-    url = "https://potted-cv-1.cognitiveservices.azure.com/customvision/v3.0/Prediction/7308f98a-e5c4-4d9d-9f3e-7be4cc604a0b/classify/iterations/Potted-CV%20model/url"
+    url = "" #INSERT CUSTOM VISION PREDICTION API URL
     headers = {
 	    'Content-Type': 'application/json',
-	    'Prediction-Key': 'd11988b68aff44689442d2995dd4912f'}
+	    'Prediction-Key': ''} #INSERT PREDICTION KEY FOR CUSTOM VISION PREDICTION API 
     response = requests.request("POST", url, headers=headers, data = image_url)
     results=response.json()
     probs={}
@@ -44,9 +44,9 @@ image_urls = {1:"{\n    \"Url\": \"https://vision.eng.au.dk/wp-content/uploads/2
 
 def PostMLPrediction(data_input):
     # URL for the web service
-    scoring_uri = 'http://b620d5b4-8c60-4f5f-adaf-701e32b1e093.southeastasia.azurecontainer.io/score'
+    scoring_uri = ''  #INSERT URL FOR THE AZURE MACHINE LEARNING WEB SERVICE
     # If the service is authenticated, set the key or token
-    key = 'I9ehNbxEK7Z1lsKv6S7dcSG7FP6FY1i3'
+    key = '' #INSERT THE KEY WITH IT IS SET 
     data = {"data":[data_input]
         }
     # Convert to JSON string

@@ -17,15 +17,15 @@ from azure.iot.device import IoTHubDeviceClient, Message, MethodResponse
 # The device connection string to authenticate the device with your IoT hub.
 # Using the Azure CLI:
 # az iot hub device-identity show-connection-string --hub-name {YourIoTHubName} --device-id MyNodeDevice --output table
-CONNECTION_STRING = "HostName=Potted-1.azure-devices.net;DeviceId=P01;SharedAccessKey=BT59GCRQERFQCahYpekFCJ79eKVb4H5VNEWor2N3Y+Y="
+CONNECTION_STRING = "" #INSERT CONNECTION STRING
 
 #Simulating the results from the Custom Vision Prediction API
 
 def PostCVPrediction(image_url):
-    url = "https://potted-cv-1.cognitiveservices.azure.com/customvision/v3.0/Prediction/7308f98a-e5c4-4d9d-9f3e-7be4cc604a0b/classify/iterations/Potted-CV%20model/url"
+    url = "" #INSERT CUSTOM VISION PREDICTION API URL
     headers = {
 	    'Content-Type': 'application/json',
-	    'Prediction-Key': 'd11988b68aff44689442d2995dd4912f'}
+	    'Prediction-Key': ''} #INSERT PREDICTION KEY FOR CUSTOM VISION PREDICTION API 
     response = requests.request("POST", url, headers=headers, data = image_url)
     results=response.json()
     probs={}

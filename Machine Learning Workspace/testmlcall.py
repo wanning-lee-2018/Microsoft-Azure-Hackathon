@@ -2,9 +2,9 @@ import requests
 import json
 
 # URL for the web service
-scoring_uri = 'http://b620d5b4-8c60-4f5f-adaf-701e32b1e093.southeastasia.azurecontainer.io/score'
+scoring_uri = '' #INSERT AZURE MACHINE LEARNING WEB SERVICE URL
 # If the service is authenticated, set the key or token
-key = 'I9ehNbxEK7Z1lsKv6S7dcSG7FP6FY1i3'
+key = '' #INSERT KEY IF SET
 
 # 1 set of data to score, so we get 1 result back
 # data = {"data":
@@ -41,7 +41,7 @@ result=(resp.json())
 result2=json.loads(result)
 #print(result2)
 #print(type(result2))   #<type 'dict'>
-print(result2["result"][0])
+print(result2["result"][0])    #PRINT 1 OR 0, WHERE 1 MEANS THE PLANT IS HEALTHY AND 0 MEANS THE PLANT IS UNHEALHTY
 
 #print(input_data)
 
