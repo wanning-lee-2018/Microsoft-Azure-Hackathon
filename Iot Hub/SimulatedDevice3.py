@@ -70,7 +70,6 @@ def PostMLPrediction(data_input):
     IsHealthy=result2["result"][0]
     return IsHealthy
 
-MSG_TXT = '{{"temperature(C)": {temperature},"humidity(%)": {humidity},"pH Level":{ph},"sunlight(lux)":{sunlight},"soil_moisture(%)":{moisture},"HasWeed":{HasWeed},"IsHealhty":{IsHealthy}}}'
 
 INTERVAL = 1
 
@@ -107,6 +106,7 @@ def device_method_listener(device_client):
         device_client.send_method_response(method_response)
 
 
+MSG_TXT = '{{"temperature(C)": {temperature},"humidity(%)": {humidity},"pH Level":{ph},"sunlight(lux)":{sunlight},"soil_moisture(%)":{moisture},"HasWeed":{HasWeed},"IsHealhty":{IsHealthy}}}'
 
 def iothub_client_telemetry_sample_run():
 
