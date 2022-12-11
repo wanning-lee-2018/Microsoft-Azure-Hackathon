@@ -10,5 +10,6 @@ A critical limitation of our solution is the lack of physical plant samples and 
 
 The following image shows the visualisation dashboard in PowerBI after receiving the simulated plant data from Azure IoT Hub via Stream Analytics
 ![image](https://user-images.githubusercontent.com/43470271/206906156-449ca7f7-2618-49fe-9fb7-446842af4afd.png)
+![image](https://user-images.githubusercontent.com/43470271/206907572-aebf4302-dc55-4ce3-8392-d168080a32bd.png)
 
 Find out more about our experiences and submissions in the Microsoft Azure Hackathon 2020 at https://medium.com/@pottedteam/microsoft-azure-virtual-hackathon-497871f41c03?source=friends_link&sk=cb4b5af1625295826e43fd457b3fe83d
