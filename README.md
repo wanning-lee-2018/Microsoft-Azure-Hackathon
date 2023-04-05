@@ -5,7 +5,7 @@ Microsoft Azure Hackthon 2020 was launched in partnership with the United Nation
 
 Find out more about our experiences and submissions in the Microsoft Azure Hackathon 2020 at https://medium.com/@pottedteam/microsoft-azure-virtual-hackathon-497871f41c03?source=friends_link&sk=cb4b5af1625295826e43fd457b3fe83d
 
-This code repository contains Team Potted's solution prototype, developed based on the following (revised) system architecture diagram.
+This code repository contains Team Potted's solution (proof of concept), developed based on the following (revised) system architecture diagram.
 ![image](https://user-images.githubusercontent.com/43470271/206885209-ef99e09a-40c3-440c-91e6-5999e99c4872.png)
 
 A critical limitation of our solution is the lack of physical plant samples and lack of a physical Internet Of Things(IoT) device(and sensors) to detect and collect real-life plant data and send it to the Microsoft Azure IoT Hub in real-time.
